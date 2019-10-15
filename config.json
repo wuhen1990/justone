@@ -1,36 +1,40 @@
 {
-  "inbounds": [
-    {
-      "port": 12310,
-      "protocol": "vmess",
-      "settings": {
-        "clients": [
-          {
-            "id": "9be92653-384b-4c38-85af-ca69ddc791ca",
-            "id": "9be92653-384b-4c38-85af-ca69ddc791cb",
-            "id": "9be92653-384b-4c38-85af-ca69ddc791cc",
-            "id": "9be92653-384b-4c38-85af-ca69ddc791cd",
-            "alterId": 64
-          }
-        ]
-      },
-      "streamSettings": {
-        "network": "mkcp",
-        "kcpSettings": {
-          "uplinkCapacity": 5,
-          "downlinkCapacity": 100,
-          "congestion": true,
-          "header": {
-            "type": "none"
-          }
+  "inbounds": [{
+    "port": 11806,
+    "protocol": "vmess",
+    "settings": {
+      "clients": [
+        {
+          "id": "506f7472-6c9b-4ef7-a8be-a4525c1196f5",
+          "id": "506f7472-6c9b-4ef7-a8be-a4525c1196f6",
+          "id": "506f7472-6c9b-4ef7-a8be-a4525c1196f7",
+          "id": "506f7472-6c9b-4ef7-a8be-a4525c1196f8",
+          "id": "506f7472-6c9b-4ef7-a8be-a4525c1196f9",
+          "id": "506f7472-6c9b-4ef7-a8be-a4525c1196f1",
+          "id": "506f7472-6c9b-4ef7-a8be-a4525c1196f2",
+          "id": "506f7472-6c9b-4ef7-a8be-a4525c1196f3",
+          "id": "506f7472-6c9b-4ef7-a8be-a4525c1196f4",
+          "level": 1,
+          "alterId": 64
         }
+      ]
+    }
+  }],
+  "outbounds": [{
+    "protocol": "freedom",
+    "settings": {}
+  },{
+    "protocol": "blackhole",
+    "settings": {},
+    "tag": "blocked"
+  }],
+  "routing": {
+    "rules": [
+      {
+        "type": "field",
+        "ip": ["geoip:private"],
+        "outboundTag": "blocked"
       }
-    }
-  ],
-  "outbounds": [
-    {
-      "protocol": "freedom",
-      "settings": {}
-    }
-  ]
+    ]
+  }
 }
