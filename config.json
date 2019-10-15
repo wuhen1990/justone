@@ -1,0 +1,36 @@
+{
+  "inbounds": [
+    {
+      "port": 12310,
+      "protocol": "vmess",
+      "settings": {
+        "clients": [
+          {
+            "id": "9be92653-384b-4c38-85af-ca69ddc791ca",
+            "id": "9be92653-384b-4c38-85af-ca69ddc791cb",
+            "id": "9be92653-384b-4c38-85af-ca69ddc791cc",
+            "id": "9be92653-384b-4c38-85af-ca69ddc791cd",
+            "alterId": 64
+          }
+        ]
+      },
+      "streamSettings": {
+        "network": "mkcp",
+        "kcpSettings": {
+          "uplinkCapacity": 5,
+          "downlinkCapacity": 100,
+          "congestion": true,
+          "header": {
+            "type": "none"
+          }
+        }
+      }
+    }
+  ],
+  "outbounds": [
+    {
+      "protocol": "freedom",
+      "settings": {}
+    }
+  ]
+}
